@@ -51,7 +51,7 @@ class UserModel {
                 const query = `INSERT INTO users (first_name, last_name, email, password) VALUES ('${user.first_name}', '${user.last_name}', '${user.email}', '${user.password}') RETURNING id, first_name, last_name, email`;
                 const result = yield conn.query(query);
                 conn.release();
-                console.log(`From Model ${result}`);
+                // console.log(`From Model ${result}`);
                 return result.rows[0];
             }
             catch (err) {
@@ -71,7 +71,7 @@ class UserModel {
       WHERE id='${user.id}' RETURNING id, first_name, last_name, email`;
                 const result = yield conn.query(query);
                 conn.release();
-                console.log(query);
+                // console.log(query);
                 return result.rows[0];
             }
             catch (err) {

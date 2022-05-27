@@ -19,6 +19,28 @@ run -  npm install to download all node modules
 
 ## How to setup and connect to the database
 
+
+### Example of .env file
+
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+
+POSTGRES_DB=storeFront_dev
+POSTGRES_DB_TEST=storeFront_test
+
+POSTGRES_USER=postgres
+POSTGRES_PWD=123456789
+
+BCRYPT_PWD=your-secret
+SALT_ROUNDS=10
+
+TOKEN_SECRET=your-token
+
+ENV=dev
+
+
+
+
 .env file should be created and the following varaiables is added to it
 
 There is two databases required for development and testing 

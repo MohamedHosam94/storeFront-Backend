@@ -6,7 +6,7 @@ export type User = {
   first_name: string;
   last_name: string;
   email: string;
-  password: string;
+  password?: string;
 };
 
 export class UserModel {
@@ -45,7 +45,7 @@ export class UserModel {
       const result = await conn.query(query);
       
       conn.release();
-      console.log(`From Model ${result}`);
+      // console.log(`From Model ${result}`);
       return result.rows[0];
       
       
@@ -69,7 +69,7 @@ export class UserModel {
 
       const result = await conn.query(query);
       conn.release();
-      console.log(query);
+      // console.log(query);
       
       return result.rows[0];
     } catch (err) {
